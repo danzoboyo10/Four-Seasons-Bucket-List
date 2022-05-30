@@ -5,51 +5,50 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="indexStyle.css">
 		<title>Four Seasons</title>
+
 	</head>
 	<body>
-		<h1>Four Seasons</h1>
-        <ul>
-			<% seasons.forEach(season => { %>
-                
-                <li>
-                    <a href="/seasons/<%=season._id; %>"> <%=season.title; %> </a>
-				
-				<form action="/seasons/<%= season
-                ._id %>?_method=DELETE" method="POST" style = "display: inline; margin-left: 16px;">
-					<input type="submit" value="DELETE" />
-				</form>
-                </li>			
-                <li>
-                    <a href="/seasons/<%=season
-                    ._id; %>" method="DELETE"></a>
-                    <%=season.description; %>
-                </li>
-				<a href="/seasons/<%=season._id %>/edit">Edit</a>
-			<% }) %>
-		</ul>
-
-<nav>
-	<a href="/seasons/new">Add a New Bucket List Item</a>
-</nav>
-<nav>
-<a href="/seasons/new">Summer</a>
-</nav>
-<nav>	
-    <a href="/seasons/new">Fall</a>
-</nav>
-<nav>
-	<a href="/seasons/new">Winter</a>
-    
-</nav>
-<nav>
-	<a href="/seasons/new">Spring</a>
-
-</nav>
-
-
-
-
+        <div class="container">
+            <header> <h1>
+                Four Seasons Bucket List
+            </h1></header>
+        <nav id="nav-bar">
+            <a href="/seasons/new">Add a New Bucket List Item</a>
+            <a href="/seasons/">Home </a>
+        </nav>
+        
+        <div id = "content1"> <img id="summer" src="https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <nav>
+            <a href="/seasons/new">Summer</a>
+        </nav>
+        </div>
+        <div id = "content2"> 
+        <img id ="fall" src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <nav>
+            <a href="/seasons/new">Fall</a>
+        </nav>
+        </div>
+        <div id = "content3"> 
+            <img id="winter" src="https://images.pexels.com/photos/3375674/pexels-photo-3375674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <nav>
+            <a href="/seasons/new">Winter</a>
+        </nav>
+          
+        </div>
+        <div id = "content4"> 
+            <img id="spring" src="https://images.pexels.com/photos/4198566/pexels-photo-4198566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <nav>
+            <a href="/seasons/new">Spring</a>
+        </nav>
+        </div>
+        <footer> 
+            
+        <%- include('./partials/footer.ejs')%>
+        
+        </footer>
+        </div>
 
 
 	</body>

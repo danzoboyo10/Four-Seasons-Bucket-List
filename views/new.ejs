@@ -12,7 +12,12 @@
 	<body>
 		<h1>New Bucket List Item Page</h1>
 		<form action="/seasons" method="POST">
-            Winter: <input type="radio" name="season" /><br />
+            <h3> Select Season</h3>
+            <input type="radio" name="season"/>  Summer:
+             <input type="radio" name="season" /> Fall:
+             <input type="radio" name="season"/> Winter:
+            <input type="radio" name="season"/>  Spring: </br>
+
 			Title: <input type="text" name="title" /><br />
 			Description: <input type="text" name="description" /><br />
 			Image: <input type="text" name="img" /><br />
@@ -20,5 +25,8 @@
             Completed: <input type="checkbox" name="completed" /><br />
 			<input type="submit" name="" value="Add Bucket List Item" />
 		</form>
+        <nav>
+			<a href="/seasons">Back to Seasons Index</a>
+		</nav>
 	</body>
 </html>

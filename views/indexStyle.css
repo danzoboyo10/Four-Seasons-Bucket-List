@@ -1,0 +1,93 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+ 
+  
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.2fr 1.3fr 1.3fr 0.5fr;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "content1 content1 content2 content2"
+      "content3 content3 content4 content4"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+  }
+  
+  header {
+    background:lightskyblue;
+    grid-area: header;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+ 
+  
+  
+  #content1 {
+    background:lightgoldenrodyellow;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #summer {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #content2 {
+    background:lightcyan;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #fall {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #content3 {
+    background:lightcoral;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #winter {
+    max-width: 100%;
+      height: auto;
+  }
+  #content4 {
+    background: lightblue;
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #spring {
+    max-width: 100%;
+      height: auto;
+  }
+
+  
+  footer {
+    background: orange;
+    grid-area: footer;
+    
+  }
+  
+
+  

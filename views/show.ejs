@@ -11,6 +11,22 @@
 		<nav>
 			<a href="/seasons">Back to Seasons Index</a>
 		</nav>
+        <h1><%=season.title %></h1>
+        Description: <%= season.description%>
+		<br />
+        Image: <%= season.img%>
+		<br />
+        Price: <%= season.price%>
+		<br />
+        Completed: <%= season.completed%>
+		<br />
+        <a href="/seasons/<%=season._id %>/edit">Edit Bucket List Item</a> 		<br />
+
+
+        <form action="/seasons/<%= season
+        ._id %>?_method=DELETE" method="POST" style = "display: inline; margin-left: 16px;">
+        <input type="submit" value="DELETE" />
+        <a href="/seasons/<%=season._id; %>" method="DELETE"> delete item</a>
 	
 	</body>
 </html>

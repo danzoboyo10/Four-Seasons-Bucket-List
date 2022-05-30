@@ -3,6 +3,7 @@ const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+
 const seasonsController = require("./controllers/seasons");
 const morgan = require('morgan');
 
@@ -24,6 +25,7 @@ db.on("disconnected", () => console.log("mongo has disconnected"));
 
 // Middleware
 // Body parser middleware: give us access to req.body
+app.use(express.static('views'))
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
