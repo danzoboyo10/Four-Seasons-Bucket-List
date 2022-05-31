@@ -17,74 +17,62 @@
       "content3 content3 content4 content4"
       "footer footer footer footer";
     grid-gap: 0.2rem;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
-    color: black;
+    background-image: url('https://images.pexels.com/photos/7078622/pexels-photo-7078622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     text-align: center;
   }
   
   header {
-    background:lightskyblue;
+
     grid-area: header;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+   
   }
   nav {
-    background: #a7ffeb;
+   
     grid-area: nav;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+
   }
  
   
   
   #content1 {
-    background:lightgoldenrodyellow;
+
     grid-area: content1;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    
   }
   #summer {
-    max-width: 100%;
-    height: auto;
-  }
+    max-width: 500px;
+    object-fit: fill;  
+}
   
   #content2 {
-    background:lightcyan;
     grid-area: content2;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+ 
   }
   #fall {
-    max-width: 100%;
-    height: auto;
+    max-width: 500px;
+    object-fit: contain;
   }
   
   #content3 {
-    background:lightcoral;
     grid-area: content3;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    
   }
   #winter {
-    max-width: 100%;
-      height: auto;
+    object-fit: fill;
   }
   #content4 {
-    background: lightblue;
     grid-area: content4;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+
   }
   #spring {
-    max-width: 100%;
-      height: auto;
+    object-fit: fill;
   }
 
   
   footer {
-    background: orange;
     grid-area: footer;
     
   }

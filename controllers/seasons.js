@@ -81,8 +81,7 @@ router.post('/', (req, res) => {
 	}
     // 
 	Season.create(req.body, (error, createdSeason) => {
-        res.send(req.body)
-		// res.redirect('/seasons');
+		res.redirect('/seasons');
 	});
 });
 
@@ -100,11 +99,52 @@ router.get("/:id/edit", (req, res) => {
 router.get('/:id', (req, res) => {
 	Season.findById(req.params.id, (err, foundSeason) => {
         console.log(foundSeason)
-		res.render('show.ejs', {
+		res.render('showAll.ejs', {
 			season: foundSeason, 
 		});
 	});
 });
+// Show for Summer
+router.get('/:id', (req, res) => {
+	Season.findById(req.params.id, (err, foundSeason) => {
+        console.log(foundSeason)
+		res.render('summerShow.ejs', {
+			season: foundSeason, 
+		});
+	});
+});
+// Show for Fall
+router.get('/:id', (req, res) => {
+	Season.findById(req.params.id, (err, foundSeason) => {
+        console.log(foundSeason)
+		res.render('fallShow.ejs', {
+			season: foundSeason, 
+		});
+	});
+});
+// Show for Winter
+router.get('/:id', (req, res) => {
+	Season.findById(req.params.id, (err, foundSeason) => {
+        console.log(foundSeason)
+		res.render('winterShow.ejs', {
+			season: foundSeason, 
+		});
+	});
+});
+// Show for Spring
+router.get('/:id', (req, res) => {
+	Season.findById(req.params.id, (err, foundSeason) => {
+        console.log(foundSeason)
+		res.render('springShow.ejs', {
+			season: foundSeason, 
+		});
+	});
+});
+
+
+
+
+
 
 
 
