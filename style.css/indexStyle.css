@@ -3,11 +3,10 @@
     --main-padding: 5px;
   }
   
- 
+
   
   .container {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.4fr 0.2fr 1.3fr 1.3fr 0.5fr;
     grid-template-areas:
@@ -20,7 +19,10 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
-    background-image: url('https://images.pexels.com/photos/7078622/pexels-photo-7078622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    
+    background: url('https://images.pexels.com/photos/7078622/pexels-photo-7078622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center fixed;
+
+    background-size: cover;
     text-align: center;
   }
   
@@ -43,8 +45,12 @@
     
   }
   #summer {
-    max-width: 500px;
-    object-fit: fill;  
+   width: 70%;
+   height: 600px;
+   object-fit: fill;  
+   border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   border-radius: 0;
+   border-style: solid;
+   border-width: 25px;
 }
   
   #content2 {
@@ -52,8 +58,13 @@
  
   }
   #fall {
-    max-width: 500px;
-    object-fit: contain;
+   width: 70%;
+   height: 600px;
+   object-fit: fill; 
+   border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+   border-radius: 0;
+   border-style: solid;
+   border-width: 25px;
   }
   
   #content3 {
@@ -61,14 +72,30 @@
     
   }
   #winter {
-    object-fit: fill;
+    width: 70%;
+    height: 600px;
+    object-fit: fill; 
+    border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    border-radius: 0;
+    border-style: solid;
+    border-width: 25px;
+  
+  
   }
   #content4 {
     grid-area: content4;
 
   }
   #spring {
-    object-fit: fill;
+    width: 70%;
+    height: 600px;
+    object-fit: fill; 
+    border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    /* border-color: rgb(150, 111, 51) rgb(70, 49, 21); */
+    border-radius: 0;
+    border-style: solid;
+    border-width: 25px; 
+  
   }
 
   
