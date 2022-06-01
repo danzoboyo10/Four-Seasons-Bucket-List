@@ -4,23 +4,34 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Summer Bucket List</title>
 	</head>
 	<body>
 		<nav>
 			<a href="/seasons">Back to Seasons Index</a>
 		</nav>
-		
-        <h2><%=season.season %></h2>
-        <h1><%=season.title %></h1>
-        Description: <%= season.description%>
-		<br />
-        Image: <%= season.img%>
-		<br />
-        Price: <%= season.price%>
-		<br />
-        Completed: <%= season.completed%>
-		<br />
+		<ul>
+			<%= console.log(season) %>
+		<% for (let i = 0; i < season.length; i++) { %>
+		<%	if (season[i].season === "summer") { %>
+			<li>
+			<%=season[i].season %>
+			</li>
+			<li><%=season[i].title %>
+			</li>
+			<li>
+			Description: <%= season[i].description %>
+			</li>
+			Image: <%= season[i].img %>
+			<li>
+			Price: <%= season[i].price %>
+			</li>
+			<li>
+			Completed: <%= season[i].completed %>
+			</li>
+			<% } %>	
+		<% } %> 
+		</ul>
         <a href="/seasons/<%=season._id %>/edit">Edit Bucket List Item</a> 		<br />
 
 
@@ -28,6 +39,9 @@
         ._id %>?_method=DELETE" method="POST" style = "display: inline; margin-left: 16px;">
         <input type="submit" value="DELETE" />
         <a href="/seasons/<%=season._id; %>" method="DELETE"> delete item</a>
+
+		<a href="/seasons/new">Add a New Bucket List Item</a>
+
 	
 	</body>
 </html>

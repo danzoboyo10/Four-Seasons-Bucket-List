@@ -93,41 +93,39 @@ router.get("/:id/edit", (req, res) => {
 	  })
 	})
   })
-
-
-
 // Show for Summer
 router.get('/summer', (req, res) => {
 	Season.find({}, (err, foundSeason) => {
-        console.log(foundSeason)
+		console.log(foundSeason)
 		res.render('show/summerShow.ejs', {
 			season: foundSeason, 
 		});
 	});
 });
+// Show for Spring
+router.get('/spring', (req, res) => {
+	Season.find({}, (err, foundSeason) => {
+		console.log(foundSeason)
+		res.render('show/springShow.ejs', {
+			season: foundSeason, 
+		});
+	});
+});
+
 // Show for Fall
-router.get('/show/fall', (req, res) => {
-	Season.findById(req.params.id, (err, foundSeason) => {
-        console.log(foundSeason)
+router.get('/fall', (req, res) => {
+	Season.find({}, (err, foundSeason) => {
+		console.log(foundSeason)
 		res.render('show/fallShow.ejs', {
 			season: foundSeason, 
 		});
 	});
 });
 // Show for Winter
-router.get('/show/winter', (req, res) => {
-	Season.findById(req.params.id, (err, foundSeason) => {
-        console.log(foundSeason)
+router.get('/winter', (req, res) => {
+	Season.find({}, (err, foundSeason) => {
+		console.log(foundSeason)
 		res.render('show/winterShow.ejs', {
-			season: foundSeason, 
-		});
-	});
-});
-// Show for Spring
-router.get('/show/spring', (req, res) => {
-	Season.findById(req.params.id, (err, foundSeason) => {
-        console.log(foundSeason)
-		res.render('show/springShow.ejs', {
 			season: foundSeason, 
 		});
 	});
@@ -136,7 +134,7 @@ router.get('/show/spring', (req, res) => {
 // Show
 router.get('/:id', (req, res) => {
 	Season.findById(req.params.id, (err, foundSeason) => {
-        console.log(foundSeason)
+		console.log(foundSeason)
 		res.render('show/showAll.ejs', {
 			season: foundSeason, 
 		});

@@ -20,8 +20,11 @@
     text-transform: uppercase;
     font-size: 13px;
     
-    background: url('https://images.pexels.com/photos/7078622/pexels-photo-7078622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center fixed;
-
+    background: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center fixed;
+    border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   
+    border-radius: 45px;
+    border-style: solid;
+    border-width: 40px;
     background-size: cover;
     text-align: center;
   }
@@ -35,6 +38,9 @@
    
     grid-area: nav;
 
+  }
+  #bucket-list {
+    width:25%;
   }
  
   
@@ -101,7 +107,11 @@
   
   footer {
     grid-area: footer;
-    
+    font-size: 20px;
+    color: antiquewhite;
+    position: relative;
+    left: -400px;
+    bottom: -132px;
   }
   
 
