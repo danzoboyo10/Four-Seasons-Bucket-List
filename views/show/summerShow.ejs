@@ -11,9 +11,9 @@
 			<a href="/seasons">Back to Seasons Index</a>
 		</nav>
 		<ul>
-			<%= console.log(season) %>
-		<% for (let i = 0; i < season.length; i++) { %>
-		<%	if (season[i].season === "summer") { %>
+			<% for (let i = 0; i < season.length; i++) { %>
+				<%= console.log(season[i]._id) %>
+		<%	if (season[i].season === "Summer") { %>
 			<li>
 			<%=season[i].season %>
 			</li>
@@ -29,16 +29,19 @@
 			<li>
 			Completed: <%= season[i].completed %>
 			</li>
+			<li>
+				<a href="/seasons/<%= season[i]._id%>"> <%=season.title %> </a>
+				<form action="/seasons/<%= season[i]._id%>?_method=DELETE" method="POST">
+					<input type="submit" value="DELETE"/></form> 
+					<a href="/seasons/<%=season[i]._id %>/edit"> Edit Bucket List Item </a>
+				</li>
 			<% } %>	
 		<% } %> 
 		</ul>
-        <a href="/seasons/<%=season._id %>/edit">Edit Bucket List Item</a> 		<br />
+      
 
 
-        <form action="/seasons/<%= season
-        ._id %>?_method=DELETE" method="POST" style = "display: inline; margin-left: 16px;">
-        <input type="submit" value="DELETE" />
-        <a href="/seasons/<%=season._id; %>" method="DELETE"> delete item</a>
+   
 
 		<a href="/seasons/new">Add a New Bucket List Item</a>
 
