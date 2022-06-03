@@ -12,7 +12,8 @@ A fun and interactive bucket list application that allows you to create, read, u
 * Express
 
 ## Screenshots 
-<img width="1680" alt="Screen Shot 2022-06-03 at 9 35 47 AM" src="https://user-images.githubusercontent.com/101149907/171864914-155ff982-af22-445a-a84b-7ccdbb6b82ff.png">
+![Screen Shot 2022-06-03 at 10 20 30 AM](https://user-images.githubusercontent.com/101149907/171873091-8b71889b-ba41-45ea-a212-8afe3d706be9.png)
+
 
 Click <a href = https://four-seasons-bucket-list.herokuapp.com/seasons> here </a> to see the deployed app!
 
