@@ -32,12 +32,18 @@
   header {
 
     grid-area: header;
-   
+    color: white; 
+    font-size: 30px;  
   }
   nav {
    
     grid-area: nav;
 
+  }
+  #nav-bar {
+
+    font-size: 45px;
+    padding-bottom: 40px;
   }
   #bucket-list {
     width:25%;
@@ -58,6 +64,11 @@
    border-radius: 0;
    border-style: solid;
    border-width: 25px;
+}
+.seasonLink {
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
   
   #content2 {
@@ -111,8 +122,8 @@
     font-size: 20px;
     color: antiquewhite;
     position: relative;
-    left: -400px;
-    bottom: -132px;
+    left: -341px;
+    bottom: -135px;
   }
   
 
