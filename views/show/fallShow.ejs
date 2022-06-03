@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../showStyle.css">
 		<title>Summer Bucket List</title>
 	</head>
 	<body>
@@ -22,7 +23,7 @@
 			<li>
 			Description: <%= season[i].description %>
 			</li>
-			Image: <%= season[i].img %>
+			<img class = "showImages" src="<%= season[i].img %>"</br>
 			<li>
 			Price: <%= season[i].price %>
 			</li>
@@ -30,10 +31,10 @@
 			Completed: <%= season[i].completed %>
 			</li>
 			<li>
-				<a href="/seasons/<%= season._id%>"> <%=season.title %> </a>
-				<form action="/seasons/<%= season.id%>?_method=DELETE" method="POST">
+				<a href="/seasons/<%= season[i]._id%>"> <%=season.title %> </a>
+				<form action="/seasons/<%= season[i]._id%>?_method=DELETE" method="POST">
 					<input type="submit" value="DELETE"/></form> 
-					<a href="/seasons/<%=season._id %>/edit"> Edit Bucket List Item </a>
+					<a href="/seasons/<%=season[i]._id %>/edit"> Edit Bucket List Item </a>
 				</li>
 			<% } %>	
 		<% } %> 

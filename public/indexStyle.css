@@ -54,7 +54,8 @@
    width: 70%;
    height: 600px;
    object-fit: fill;  
-   border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   border-radius: 0;
+   border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   
+   border-radius: 0;
    border-style: solid;
    border-width: 25px;
 }

@@ -25,7 +25,7 @@ db.on("disconnected", () => console.log("mongo has disconnected"));
 
 // Middleware
 // Body parser middleware: give us access to req.body
-app.use(express.static('style.css'))
+app.use(express.static('public'))
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
