@@ -14,7 +14,7 @@ A fun and interactive bucket list application that allows you t
 ## Screenshots 
 <img width="1680" alt="Screen Shot 2022-06-03 at 9 35 47 AM" src="https://user-images.githubusercontent.com/101149907/171864914-155ff982-af22-445a-a84b-7ccdbb6b82ff.png">
 
-Click <a href = https://bright-queijadas-09761b.netlify.app/> here </a> to see the deployed app!
+Click <a href = https://four-seasons-bucket-list.herokuapp.com/seasons> here </a> to see the deployed app!
 
 ## Future Enhancements
 
