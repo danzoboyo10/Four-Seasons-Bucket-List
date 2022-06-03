@@ -1,6 +1,6 @@
 ## Four-Seasons-Bucket-List
 
-A fun and interactive bucket list application that allows you t
+A fun and interactive bucket list application that allows you to create, read, update, and delete bucket list items!
 
 ## Technologies Used 
 * HTML 5
