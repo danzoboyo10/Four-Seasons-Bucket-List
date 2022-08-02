@@ -48,7 +48,7 @@ module.exports = [{
     completed: true, 
 },
 {
-    season: 'Summer',
+    season: 'Fall',
     title: 'Sky Diving',
     description: 'Jump out of an airplane',
     img: 'https://images.pexels.com/photos/739671/pexels-photo-739671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',

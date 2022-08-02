@@ -6,6 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="indexStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap" rel="stylesheet">
+        
 		<title>Four Seasons</title>
 
 	</head>
@@ -14,39 +18,47 @@
             <header> <h1>
             FOUR SEASONS BUCKET LIST
             </h1></header>
-        <nav id="nav-bar">
-            <a href="/seasons/new">ADD A BUCKET LIST ITEM</br> TO THE SEASON OF YOUR CHOICE</a>
+        <nav class="nav-bar">
+            <ul class ="navBarContainer">
+              <li class="navItems"><a class="navLinks" href="#">Home</a></li>
+              <li class="navItems"><a class="navLinks" href="#">About</a></li>
+              <li class="navItems"><a class="navLinks" href="/seasons/new">Add a Bucket List Item</a></li>
+              <li id="summerNav"><a class="navLinks" href="">Summer</a></li>
+              <li id="fallNav"><a class="navLinks" href="/seasons/new">Fall</a></li>
+              <li id="winterNav"><a class="navLinks" href="/seasons/new">Winter</a></li>
+              <li id="springNav"><a class="navLinks" href="/seasons/spring">Spring</a></li>
+            </ul>
            
         </nav>
         
         <div id = "content1"> <img id="summer" src="https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <nav class= "seasonLink">
-            <a href="/seasons/summer">SUMMER</a>
+            <button class = "seasonButtons"><a href="/seasons/summer">SUMMER</a></button>
         </nav>
         </div>
         <div id = "content2"> 
         <img id ="fall" src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <nav class= "seasonLink">
-            <a href="/seasons/fall">Fall</a>
+            <button class = "seasonButtons"><a href="/seasons/fall">FALL</a></button>
         </nav>
         </div>
         <div id = "content3"> 
             <img id="winter" src="https://images.pexels.com/photos/3375674/pexels-photo-3375674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
             <nav class= "seasonLink">
-            <a href="/seasons/winter">Winter</a>
+            <button><a href="/seasons/winter">WINTER</a></button>
         </nav>
           
         </div>
         <div id = "content4"> 
             <img id="spring" src="https://images.pexels.com/photos/4198566/pexels-photo-4198566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <nav class= "seasonLink">
-                <a href="/seasons/spring">Spring</a>
+                <button><a href="/seasons/spring">SPRING</a></button>
         </nav>
         </div>
-        <footer> 
+        <footer class="footer"> 
             
         <%- include('./partials/footer.ejs')%>
-        
+
         </footer>
         </div>
 
