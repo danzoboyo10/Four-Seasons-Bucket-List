@@ -7,29 +7,51 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../newStyle.css">
-
-		<title>New Bucket Item
+		<title>Add Bucket Item
 		</title>
 	</head>
     
 	<body>
-		<h1>New Bucket List Item Page</h1>
+		<div class = "showContainer">
+			<header> 
+				<h1> FOUR SEASONS BUCKET LIST</h1>
+		 </header>
+		 <nav class="nav-bar">
+			<ul class ="navBarContainer">
+				<li class="navItems"><a class="navLinks" href="/seasons">Home</a></li>
+				<li class="navItems"><a class="navLinks" href="#">About</a></li>
+				<li class="navItems"><a class="navLinks" href="/seasons/new">Add a Bucket List Item</a></li>
+				<li id="summerNav"><a class="navLinks" href="/seasons/summer">Summer</a></li>
+				<li id="fallNav"><a class="navLinks" href="/seasons/fall">Fall</a></li>
+				<li id="winterNav"><a class="navLinks" href="/seasons/winter">Winter</a></li>
+				<li id="springNav"><a class="navLinks" href="/seasons/spring">Spring</a></li>
+			</ul>
+	</nav>
+		<div class="content1">
+		<h1 class = "formHeader"> WHAT BUCKET LIST ITEM(S) DO YOU HAVE?</h1>
 		<form action="/seasons" method="POST">
-            <h3> Select Season</h3>
-            <input type="radio" name="season" value="Summer"/>Summer:
-             <input type="radio" name="season" value="Fall"/> Fall:
-             <input type="radio" name="season" value="Winter"/> Winter:
-            <input type="radio" name="season" value="Spring"/>  Spring: </br>
+            <h3 class = "subHeader"> * SELECT THE SEASON IN WHICH YOU PLAN TO COMPLETE YOUR BUCKET LIST ITEM(S) *</h3>
+            <input type="radio" name="season" value="Summer"/><h3 class = "radioSeason"> Summer </h3>
+            <input type="radio" name="season" value="Fall"/> <h3 class = "radioSeason"> Fall </h3>
+            <input type="radio" name="season" value="Winter"/> <h3 class = "radioSeason"> Winter </h3>
+            <input type="radio" name="season" value="Spring"/> <h3 class = "radioSeason"> Spring </h3> </br>
 
-			Title: <input type="text" name="title" /><br />
-			Description: <input type="text" name="description" /><br />
-			Image: <input type="text" name="img" /><br />
-			Price: <input type="text" name="price" /><br />
-            Completed: <input type="checkbox" name="completed" /><br />
-			<input type="submit" name="" value="Add Bucket List Item" />
+			<h3 id = "titleAttr">TITLE:</h3>
+			<input type="text" name="title" placeholder="Name of Bucket List Item" /><br />
+			<h3 id = "descriptionAttr">DESCRIPTION:</h3>
+			<input type="text" name="description" placeholder="Brief description of the bucket list item"/><br />
+			<h3 id = "imageAttr">IMAGE:</h3>
+			<input type="text" name="img" placeholder="Input an Image URL" /><br />
+			<h3 id = "priceAttr">PRICE:</h3>
+			<input type="text" name="price" placeholder="Input a Price * MUST BE A NUMBER i.e 100 *"/><br />
+      <h3 id = "completedAttr">COMPLETED:</h3>
+			<input type="checkbox" name="completed" /><br />
+			<input type="submit" name="" value="ADD ITEM" />
 		</form>
-        <nav>
-			<a href="/seasons">Back to Seasons Index</a>
-		</nav>
+		<footer class="footer"> 	
+
+			<%- include('./partials/footer.ejs')%>
+	  </footer>
+		</div>
 	</body>
 </html>

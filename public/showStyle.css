@@ -1,34 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-  .showImages {
+.showContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.1fr 1.3fr 1.3fr 0.5fr;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "content1 content1 content1 content1"
+    "content1 content1 content1 content1"
+    "footer footer footer footer";
+  font-weight: bold;
+  font-size: 13px;
+  
+  background: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=770&dpr=1') center center fixed;
+  border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=770&dpr=1');   
+  border-radius: 45px;
+  border-style: solid;
+  border-width: 40px;
+  background-size: cover;
+  text-align: center;
+}
 
-    width: 30%;
-    height: 300px;
-    object-fit: fill;  
-    border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   
-    border-radius: 0;
-    border-style: solid;
-    border-width: 25px;
+.showImages {
+  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 400px;
+  object-fit: fill;  
+  border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   
+  border-radius: 0;
+  border-style: solid;
+  border-width: 25px;
+  color: black;
 
-  }
-  .showContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.4fr 0.2fr 1.3fr 1.3fr 0.5fr;
-    grid-template-areas:
-      "header header header header"
-      "nav nav nav nav"
-      "content1 content1 content2 content2"
-      "content3 content3 content4 content4"
-      "footer footer footer footer";
-    }
-    
-    
-    body {
-      
-      background: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-      
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 29px;
-      color: white;
-    }
+}
+
+header {
+  grid-area: header;
+  color: white; 
+  background-color: black;
+  font-family: 'Abhaya Libre', serif;
+  font-size: 40px;
+  text-shadow: yellow 2px 0 8px;  
+  text-decoration: underline;
+
+}
+nav {
+  grid-area: nav;
+}
+.navBarContainer {
+  list-style-type: none;
+  border: 2px solid white;
+}
+.nav-bar {
+  font-size: 20px;
+  background-color: black;
+  margin-bottom: 30px;
+  float: left;
+
+}
+.navItems {
+  float: left;
+}
+
+.navLinks {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+.navLinks:hover {
+  background-color:grey;
+
+}
+#homeNav {
+  display: inline;
+  text-align: left;
+  
+}
+#aboutNav {
+  display: inline;
+}
+
+#addItemNav {
+  float: right;
+}
+
+#summerNav {
+  float: right;
+}
+
+#fallNav {
+  float: right;
+}
+
+#winterNav {
+  float: right;
+}
+
+#springNav {
+  float: right;
+}
+
+.footer {
+  grid-area: footer;
+  position: relative;
+  bottom: -40px;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  color: antiquewhite;
+  text-shadow: yellow 2px 0 8px;  
+  text-decoration: underline;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.content1 {
+  display: block;
+  grid-area: content1;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}
+
+.season {
+  display: block;
+  display: flex;
+  font-size: 37px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+  color: white;
+  padding: 4px;
+  padding-left: 35px;
+}
+
+#season {
+  float:left;
+  display: block;
+  display: flex;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+  color: white;
+  padding-top: 20px;
+
+}
+
+.deleteBtn {
+  display: inline;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 8px;
+  margin: 0 auto;
+  
+}
+
+.editBtn {
+  display: inline;
+  display: flex;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 4px;
+  margin: 0 auto;
+}
+
+#winterHeader {
+  text-align: center;
+  color: black;
+  text-shadow: rgb(58, 178, 237) 2px 0 8px;  
+  font-size: 50px;
+  font-family: 'Abhaya Libre', serif;
+  padding-bottom: 25px;
+}
+
+#summerHeader {
+  text-align: center;
+  color: black;
+  text-shadow: yellow 2px 0 6px;  
+  font-size: 50px;
+  font-family: 'Abhaya Libre', serif;
+  padding-bottom: 25px;
+}
+
+#springHeader {
+  text-align: center;
+  color: black;
+  text-shadow: green 2px 0 6px;  
+  font-size: 50px;
+  font-family: 'Abhaya Libre', serif;
+  padding-bottom: 25px;
+}
+
+#fallHeader {
+  text-align: center;
+  color: black;
+  text-shadow: orange 2px 0 6px;  
+  font-size: 50px;
+  font-family: 'Abhaya Libre', serif;
+  padding-bottom: 25px;
+}
+
+.bucketProps {
+  display: block;
+}
+
+.btnContainer {
+  display: inline;
+  width: 200px;
+  margin: 0 auto;
+}
+

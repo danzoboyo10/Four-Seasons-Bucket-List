@@ -1,10 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-    body {
-      
-        background: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-        
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 29px;
-        color: white;
-      }
+
+.showContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.1fr 1.3fr 1.3fr 0.5fr;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "content1 content1 content1 content1"
+    "content1 content1 content1 content1"
+    "footer footer footer footer";
+  font-weight: bold;
+  font-size: 20px;
+  
+  background: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=770&dpr=1') center center fixed;
+  border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=770&dpr=1');   
+  border-radius: 45px;
+  border-style: solid;
+  border-width: 40px;
+  background-size: cover;
+  text-align: center;
+}
+
+.showImages {
+  width: 30%;
+  height: 300px;
+  object-fit: fill;  
+  border-image: url ('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');   
+  border-radius: 0;
+  border-style: solid;
+  border-width: 25px;
+}
+
+header {
+  grid-area: header;
+  color: white; 
+  background-color: black;
+  font-family: 'Abhaya Libre', serif;
+  font-size: 40px;
+  text-shadow: yellow 2px 0 8px;  
+  text-decoration: underline;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.navBarContainer {
+  list-style-type: none;
+  border: 2px solid white;
+}
+
+.nav-bar {
+  font-size: 20px;
+  background-color: black;
+  margin-bottom: 30px;
+  float: left;
+}
+
+.navItems {
+  float: left;
+}
+
+.navLinks {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+.navLinks:hover {
+  background-color:grey;
+
+}
+
+#homeNav {
+  display: inline;
+  text-align: left;
+  
+}
+
+#aboutNav {
+  display: inline;
+}
+
+#addItemNav {
+  float: right;
+}
+
+#summerNav {
+  float: right;
+}
+
+#fallNav {
+  float: right;
+}
+
+#winterNav {
+  float: right;
+}
+
+#springNav {
+  float: right;
+}
+
+.footer {
+  grid-area: footer;
+  position: relative;
+  bottom: -89px;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  color: antiquewhite;
+  text-shadow: yellow 2px 0 8px;  
+  text-decoration: underline;
+  text-align: center;
+}
+
+.content1 {
+  display: inline;
+  grid-area: content1;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}

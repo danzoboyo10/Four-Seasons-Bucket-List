@@ -5,11 +5,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="editStyle.css">
+    <link rel="stylesheet" href="./editStyle.css">
     <title>Edit Item</title>
 </head>
-
 <body>
+    <div class = "showContainer">
+        <header> 
+            <h1> FOUR SEASONS BUCKET LIST</h1>
+     </header>
+     <nav class="nav-bar">
+        <ul class ="navBarContainer">
+            <li class="navItems"><a class="navLinks" href="/seasons">Home</a></li>
+            <li class="navItems"><a class="navLinks" href="#">About</a></li>
+            <li class="navItems"><a class="navLinks" href="/seasons/new">Add a Bucket List Item</a></li>
+            <li id="summerNav"><a class="navLinks" href="/seasons/summer">Summer</a></li>
+            <li id="fallNav"><a class="navLinks" href="/seasons/fall">Fall</a></li>
+            <li id="winterNav"><a class="navLinks" href="/seasons/winter">Winter</a></li>
+            <li id="springNav"><a class="navLinks" href="/seasons/spring">Spring</a></li>
+        </ul>
+     </nav>
+    <div class="content1">
+        <a href="/seasons">Back to Seasons Index</a>
     <h1>Edit Bucket List Item</h1>
     <form action="/seasons/<%=season._id%>?_method=PUT" method="POST">
         <!--  NOTE: the form is pre-populated with values for the server-->
@@ -23,8 +39,8 @@
         Image: <input type="text" name="img" value="<%=season.img%>" /><br />
         Price: <input type="text" name="price" value="<%=season.price%>" /><br />
         Completed: <input type="checkbox" name="completed" <% if(season.completed===true){ %> checked <% } %> />
-            <br />
-            <input type="submit" value="Submit Changes" />
+        <br />
+        <input type="submit" value="Submit Changes" />
     </form>
 </body>
 

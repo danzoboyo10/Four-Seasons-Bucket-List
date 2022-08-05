@@ -8,39 +8,62 @@
 		<title>Summer Bucket List</title>
 	</head>
 	<body>
-		<nav>
-			<a href="/seasons">Back to Seasons Index</a>
-		</nav>
-		<ul>
-			<%= console.log(season) %>
-		<% for (let i = 0; i < season.length; i++) { %>
-		<%	if (season[i].season === "Fall") { %>
-			<li>
-			<%=season[i].season %>
-			</li>
-			<li><%=season[i].title %>
-			</li>
-			<li>
-			Description: <%= season[i].description %>
-			</li>
-			<img class = "showImages" src="<%= season[i].img %>"</br>
-			<li>
-			Price: <%= season[i].price %>
-			</li>
-			<li>
-			Completed: <%= season[i].completed %>
-			</li>
-			<li>
-				<a href="/seasons/<%= season[i]._id%>"> <%=season.title %> </a>
-				<form action="/seasons/<%= season[i]._id%>?_method=DELETE" method="POST">
-					<input type="submit" value="DELETE"/></form> 
-					<a href="/seasons/<%=season[i]._id %>/edit"> Edit Bucket List Item </a>
-				</li>
-			<% } %>	
-		<% } %> 
-		</ul>
-		<a href="/seasons/new">Add a New Bucket List Item</a>
-
-	
-	</body>
-</html>
+		<div class = "showContainer">
+			<header> 
+				<h1> FOUR SEASONS BUCKET LIST</h1>
+		 	</header>
+		 <nav class="nav-bar">
+			<ul class ="navBarContainer">
+				<li class="navItems"><a class="navLinks" href="/seasons">Home</a></li>
+				<li class="navItems"><a class="navLinks" href="#">About</a></li>
+				<li class="navItems"><a class="navLinks" href="/seasons/new">Add a Bucket List Item</a></li>
+				<li id="summerNav"><a class="navLinks" href="/seasons/summer">Summer</a></li>
+				<li id="fallNav"><a class="navLinks" href="/seasons/fall">Fall</a></li>
+				<li id="winterNav"><a class="navLinks" href="/seasons/winter">Winter</a></li>
+				<li id="springNav"><a class="navLinks" href="/seasons/spring">Spring</a></li>
+			</ul>
+		 </nav>
+			<div class="content1">
+				<h2 id = "fallHeader"> FALL BUCKET LIST ITEMS </h2>
+					<ul>
+						<%= console.log(season) %>
+						<% for (let i = 0; i < season.length; i++) { %>
+							<%	if (season[i].season === "Fall") { %>
+					<img class = "showImages" src="<%= season[i].img %>" 
+						<div class = "bucketProps">
+							<li class = "season"> SEASON:
+								<%=season[i].season %> 
+							</li> <br>
+							<li class = "season"> BUCKET LIST ACTIVITY:
+								<%=season[i].title %>
+							</li> <br>
+							<li class = "season"> DESCRIPTION:
+								<%= season[i].description %>
+							</li> <br>
+							<li class = "season">PRICE: 
+								<%= season[i].price %>
+							</li> <br>
+							<li class = "season"> COMPLETED: 
+								<%= season[i].completed %>
+							</li>
+							<div class = "btnContainer">
+								<li>
+								<a href="/seasons/<%= season[i]._id%>"> <%=season.title %> </a> <br>
+								<form action="/seasons/<%= season[i]._id%>?_method=DELETE" method="POST">
+									<input class = "deleteBtn" type="submit" value="DELETE"/></form> 
+									<button class="editBtn">
+									<a class ="editBtn" href="/seasons/<%=season[i]._id %>/edit"> EDIT </a>
+									</button>
+								</li> 
+						</div> <br>
+							<% } %>	
+						<% } %> 
+						</ul>
+							</div>
+							<footer class="footer"> 
+							<%- include('../partials/footer.ejs')%>
+							</footer>
+							</div>
+						</div>
+					</body>
+				</html>
