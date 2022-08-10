@@ -126,3 +126,80 @@ nav {
   width: 100%;
   padding: 5px;
 }
+
+.formHeader {
+  text-align: center;
+  color: black;
+  text-shadow: white 1px 0 2px;  
+  font-size: 60px;
+  font-family: 'Abhaya Libre', serif;
+  padding-bottom: 20px;
+}
+
+.subHeader {
+  text-align: center;
+  color: white;
+  text-shadow: black 2px 0 8px;  
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 25px;
+  text-shadow: yellow 2px 0 8px; 
+}
+
+.radioSeason {
+  display: inline;
+  color: black;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: white 1px 0 2px;  
+}
+
+.formAttr {
+  display: inline;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 15px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+  text-shadow: yellow 2px 0 8px;  
+
+}
+
+input[type=checkbox] {
+  width: 50%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+input[type="radio"] {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: black;
+  color: white;
+  padding: 25px;
+  margin: 8px 0;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}

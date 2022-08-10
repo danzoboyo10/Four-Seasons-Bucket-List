@@ -3,11 +3,10 @@
 .showContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 0.1fr 1.3fr 1.3fr 0.5fr;
+  grid-template-rows: 0.4fr 0.1fr auto 0.4fr;
   grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "content1 content1 content1 content1"
     "content1 content1 content1 content1"
     "footer footer footer footer";
   font-weight: bold;
@@ -109,14 +108,14 @@ nav {
 .footer {
   grid-area: footer;
   position: relative;
-  bottom: -40px;
+  bottom: -15px;
   height: auto;
   width: 100%;
   font-size: 20px;
   color: antiquewhite;
   text-shadow: yellow 2px 0 8px;  
   text-decoration: underline;
-  margin-top: 120px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -148,8 +147,17 @@ nav {
   text-shadow: gold 1px 0 2px;  
   color: white;
   padding-top: 20px;
-
 }
+
+li {
+  list-style: none;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 
 .deleteBtn {
   display: inline;
@@ -157,8 +165,10 @@ nav {
   color: white;
   border-radius: 20px;
   padding: 8px;
-  margin: 0 auto;
-  
+  margin: 0 auto; 
+}
+.deleteBtn:hover {
+  text-shadow: #f1f114 2px 0 6px;  
 }
 
 .editBtn {
@@ -170,6 +180,8 @@ nav {
   padding: 4px;
   margin: 0 auto;
 }
+
+
 
 #winterHeader {
   text-align: center;
@@ -183,7 +195,7 @@ nav {
 #summerHeader {
   text-align: center;
   color: black;
-  text-shadow: yellow 2px 0 6px;  
+  text-shadow: #f1f114 2px 0 6px;  
   font-size: 50px;
   font-family: 'Abhaya Libre', serif;
   padding-bottom: 25px;
@@ -212,8 +224,14 @@ nav {
 }
 
 .btnContainer {
-  display: inline;
+  display: flex;
   width: 200px;
   margin: 0 auto;
+  flex-direction: row;
+}
+
+.bucketWrapper {
+  width: 500px;
+  height: 500px;
 }
 

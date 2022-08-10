@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./editStyle.css">
+    <link rel="stylesheet" href="/editStyle.css">
     <title>Edit Item</title>
 </head>
 <body>
     <div class = "showContainer">
         <header> 
-            <h1> FOUR SEASONS BUCKET LIST</h1>
-     </header>
+            <h1> FOUR SEASONS BUCKET LIST </h1>
+        </header>
      <nav class="nav-bar">
         <ul class ="navBarContainer">
             <li class="navItems"><a class="navLinks" href="/seasons">Home</a></li>
@@ -25,20 +25,24 @@
         </ul>
      </nav>
     <div class="content1">
-        <a href="/seasons">Back to Seasons Index</a>
-    <h1>Edit Bucket List Item</h1>
+    <h1 class = "formHeader">Edit Bucket List Item</h1>
+    <h3 class = "subHeader"> * SELECT THE SEASON IN WHICH YOU PLAN TO COMPLETE YOUR BUCKET LIST ITEM(S) * </h3>
     <form action="/seasons/<%=season._id%>?_method=PUT" method="POST">
         <!--  NOTE: the form is pre-populated with values for the server-->
-        <h4> Season:</h4> 
-        Summer: <input type="radio" name="season" value="<%=season.season%>" />
-        Fall: <input type="radio" name="season" value="<%=season.season%>" />
-        Winter: <input type="radio" name="season" value="<%=season.season%>" />
-        Spring: <input type="radio" name="season" value="<%=season.season%>" /> <br />
-        Title: <input type="text" name="title" value="<%=season.title%>" /><br />
-        Description: <input type="text" name="description" value="<%=season.description%>" /><br />
-        Image: <input type="text" name="img" value="<%=season.img%>" /><br />
-        Price: <input type="text" name="price" value="<%=season.price%>" /><br />
-        Completed: <input type="checkbox" name="completed" <% if(season.completed===true){ %> checked <% } %> />
+        <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Summer </h3>
+         <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Fall </h3>
+         <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Winter </h3>
+
+         <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Spring </h3> <br>
+     
+         
+         <h3 class = "formAttr">TITLE:</h3> 
+         <input type="text" name="title" value="<%=season.title%>" /><br />
+         <h3 class = "formAttr">DESCRIPTION:</h3> 
+         <input type="text" name="description" value="<%=season.description%>" /><br />
+         <h3 class = "formAttr">IMAGE:</h3> <input type="text" name="img" value="<%=season.img%>" /><br />
+         <h3 class = "formAttr">PRICE:</h3> <input type="text" name="price" value="<%=season.price%>" /><br />
+         <h3 class = "formAttr">COMPLETED (Check if yes): </h3><input type="checkbox" name="completed" <% if(season.completed===true){ %> checked <% } %> />
         <br />
         <input type="submit" value="Submit Changes" />
     </form>
