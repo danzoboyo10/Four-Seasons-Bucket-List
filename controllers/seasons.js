@@ -1,5 +1,5 @@
 // require dependencies 
-const express = require('express'); //node module use the singleton pattern
+const express = require('express'); 
 const Season = require('../models/season')
 
 // initialize the router object
@@ -20,9 +20,6 @@ router.get('/seed', (req, res) => {
 
 //ROUTES
 
-
-
-
 //INDEX
 
 router.get('/', (req, res) => {
@@ -37,9 +34,8 @@ router.get('/', (req, res) => {
 //NEW
 router.get('/new', (req, res) => {
 	res.render('new.ejs');
-
-
 })
+
 //DELETE
 router.delete('/:id', (req, res) => {
 	Season.findByIdAndDelete(req.params.id, (err, data) => {
@@ -62,12 +58,10 @@ router.put("/:id", (req, res) => {
 			new: true,
 		},
 		(error, updatedSeason) => {
-			res.redirect(`/seasons/${req.params.id}`)
+			res.redirect('/seasons')
 		}
 	)
 })
-
-
 
 
 // CREATE
@@ -79,7 +73,6 @@ router.post('/', (req, res) => {
 		//if not checked, req.body.completed is undefined
 		req.body.completed = false;
 	}
-	// 
 	Season.create(req.body, (error, createdSeason) => {
 		res.redirect('/seasons');
 	});
@@ -93,6 +86,7 @@ router.get("/:id/edit", (req, res) => {
 		})
 	})
 })
+
 // Show for Summer
 router.get('/summer', (req, res) => {
 	Season.find({}, (err, foundSeason) => {
@@ -102,6 +96,7 @@ router.get('/summer', (req, res) => {
 		});
 	});
 });
+
 // Show for Spring
 router.get('/spring', (req, res) => {
 	Season.find({}, (err, foundSeason) => {
@@ -121,6 +116,7 @@ router.get('/fall', (req, res) => {
 		});
 	});
 });
+
 // Show for Winter
 router.get('/winter', (req, res) => {
 	Season.find({}, (err, foundSeason) => {
@@ -140,9 +136,6 @@ router.get('/:id', (req, res) => {
 		});
 	});
 });
-
-
-
 
 
 // export the router object 

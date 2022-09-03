@@ -28,14 +28,10 @@
     <h1 class = "formHeader">Edit Bucket List Item</h1>
     <h3 class = "subHeader"> * SELECT THE SEASON IN WHICH YOU PLAN TO COMPLETE YOUR BUCKET LIST ITEM(S) * </h3>
     <form action="/seasons/<%=season._id%>?_method=PUT" method="POST">
-        <!--  NOTE: the form is pre-populated with values for the server-->
-        <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Summer </h3>
+         <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Summer </h3>
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Fall </h3>
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Winter </h3>
-
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Spring </h3> <br>
-     
-         
          <h3 class = "formAttr">TITLE:</h3> 
          <input type="text" name="title" value="<%=season.title%>" /><br />
          <h3 class = "formAttr">DESCRIPTION:</h3> 

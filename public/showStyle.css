@@ -160,28 +160,27 @@ li {
 
 
 .deleteBtn {
-  display: inline;
+  display: inline-block;
   background-color: black;
   color: white;
   border-radius: 20px;
   padding: 8px;
   margin: 0 auto; 
 }
+
 .deleteBtn:hover {
   text-shadow: #f1f114 2px 0 6px;  
 }
 
 .editBtn {
-  display: inline;
-  display: flex;
+  display: inline-block;
   background-color: black;
   color: white;
   border-radius: 20px;
   padding: 4px;
   margin: 0 auto;
+  text-decoration: none;
 }
-
-
 
 #winterHeader {
   text-align: center;
