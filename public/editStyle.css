@@ -203,3 +203,41 @@ input[type=submit] {
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
 }
+
+#titleAttr {
+  display: inline;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+  padding-right: 139px;
+}
+
+#descriptionAttr {
+  display: inline;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+}
+
+#imageAttr {
+  display: inline;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+  padding-right: 120px;
+}
+
+#priceAttr {
+  display: inline;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: gold 1px 0 2px;  
+  padding-right: 130px;
+}
+
+
+

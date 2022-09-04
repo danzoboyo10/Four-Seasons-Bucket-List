@@ -206,6 +206,7 @@ input[type=text] {
   font-size: 35px;
   font-family: 'Poppins', sans-serif;
   text-shadow: gold 1px 0 2px;  
+  padding-right: 139px;
 }
 
 #descriptionAttr {
@@ -214,7 +215,6 @@ input[type=text] {
   font-size: 35px;
   font-family: 'Poppins', sans-serif;
   text-shadow: gold 1px 0 2px;  
-
 }
 
 #imageAttr {
@@ -223,6 +223,7 @@ input[type=text] {
   font-size: 35px;
   font-family: 'Poppins', sans-serif;
   text-shadow: gold 1px 0 2px;  
+  padding-right: 120px;
 }
 
 #priceAttr {
@@ -231,6 +232,7 @@ input[type=text] {
   font-size: 35px;
   font-family: 'Poppins', sans-serif;
   text-shadow: gold 1px 0 2px;  
+  padding-right: 130px;
 }
 
 #completedAttr {

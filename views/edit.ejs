@@ -32,12 +32,14 @@
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Fall </h3>
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Winter </h3>
          <input type="radio" name="season" value="<%=season.season%>" /> <h3 class = "radioSeason"> Spring </h3> <br>
-         <h3 class = "formAttr">TITLE:</h3> 
+         <h3 id = "titleAttr">TITLE:</h3> 
          <input type="text" name="title" value="<%=season.title%>" /><br />
-         <h3 class = "formAttr">DESCRIPTION:</h3> 
+         <h3 id = "descriptionAttr">DESCRIPTION:</h3>
          <input type="text" name="description" value="<%=season.description%>" /><br />
-         <h3 class = "formAttr">IMAGE:</h3> <input type="text" name="img" value="<%=season.img%>" /><br />
-         <h3 class = "formAttr">PRICE:</h3> <input type="text" name="price" value="<%=season.price%>" /><br />
+         <h3 id = "imageAttr">IMAGE:</h3>
+         <input type="text" name="img" value="<%=season.img%>" /><br />
+         <h3 id = "priceAttr">PRICE:</h3>
+         <input type="text" name="price" value="<%=season.price%>" /><br />
          <h3 class = "formAttr">COMPLETED (Check if yes): </h3><input type="checkbox" name="completed" <% if(season.completed===true){ %> checked <% } %> />
         <br />
         <input type="submit" value="Submit Changes" />
